@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Empleado } from './interfaces/interfaces';
+import { TablaComponent } from './secciones/tabla/tabla.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,23 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'test';
+
+
+  public lista:Empleado[] = [{
+    nombre:'test',
+    apellido:'test',
+    edad:4
+   },
+  {nombre:'hosa',apellido:'pollo',edad:5}]
+
+
+agregacion(item:Empleado){
+  this.lista.push(item);
 }
+eliminacion(id:number){
+  this.lista.splice(id,1);
+}
+
+
+  }
+

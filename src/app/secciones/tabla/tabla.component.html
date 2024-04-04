@@ -1,0 +1,21 @@
+<div class="container-left border col-5  d-flex">
+  <table class="table table-sm bordered ">
+
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+
+<tr  *ngFor="let item of lista1 ;let i = index">
+<td>{{item.nombre}}</td>
+<td>{{item.apellido}}</td>
+<td>{{item.edad}}</td>
+<button type="button" class="btn btn-danger btn-sm" (click)="onDelete(i)"> X </button>
+</tr>
+</tbody>
+</table>
+</div>

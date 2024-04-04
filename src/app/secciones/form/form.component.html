@@ -1,0 +1,13 @@
+<form (ngSubmit)="emitir()" >
+
+  <label for="">Nombre</label>
+  <input type="text" name="nombre"  [(ngModel)]="temp_empleado.nombre" class="form-control">
+  <label for="">Apellido</label>
+  <input type="text"  name="apellido"  [(ngModel)]="temp_empleado.apellido"  class="form-control">
+  <label for="">Edad</label>
+  <input type="number"  name="edad" [(ngModel)]="temp_empleado.edad"  class="form-control">
+
+<button type="submit"> Agregar</button>
+
+</form>
+
